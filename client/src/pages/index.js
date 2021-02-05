@@ -41,7 +41,7 @@ class Home extends Component {
                                 </Link> */}
                                 <HeroPost
                                     id={item._id}
-                                    // image={item.image}
+                                    //  image={item.image}
                                     slug={item.slug}
                                     title={item.title}
                                     description={item.description}
