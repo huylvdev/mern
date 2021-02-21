@@ -23,30 +23,14 @@ class Home extends Component {
                 <Grid container spacing={6}>
                     {data.map((item, i) =>
                         <Grid key={item._id} item xs={12} sm={6} md={4}>
-                            <Card style={{ maxWidth: 345 }}>
-                                {/* <Link href={{ pathname: item.slug, query: { postId: item._id } }}>
-                                    <Paper>
-                                        <CardMedia
-                                            component="img"
-                                            alt={item.title}
-                                            height="140"
-                                            // image={item.image}
-                                            title={item.title}
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="h2">{item.title}</Typography>
-                                            <Typography variant="body2" color="textSecondary" component="p"> {item.description} </Typography>
-                                        </CardContent>
-                                    </Paper>
-                                </Link> */}
-                                <HeroPost
-                                    id={item._id}
-                                    //  image={item.image}
-                                    slug={item.slug}
-                                    title={item.title}
-                                    description={item.description}
-                                />
-                            </Card>
+                            <HeroPost
+                                id={item._id}
+                                image={item.image}
+                                slug={item.slug}
+                                title={item.title}
+                                description={item.description}
+                            />
+
                         </Grid>
                     )}
                 </Grid>
