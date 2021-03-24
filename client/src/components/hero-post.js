@@ -6,22 +6,30 @@ const Button = styled.a`
 export default function HeroPost({ title, slug, description, id, image }) {
     return (
 
-        <Link href={{ pathname: slug, query: { postId: id } }}>
-            <div>
-                <CardMedia
-                    component="img"
-                    alt={title}
-                    height="200"
-                    image={image}
-                    title={title}
-                />
-                <Button>{title}</Button>
-                <div>
-                    <Typography variant="body2" color="textSecondary" component="p"> {description} </Typography>
-                </div>
-            </div >
+        <div>
+            <CardMedia
+                component="img"
+                alt={title}
+                height="200"
+                image={image}
+                title={title}
+            />
 
-        </Link>
+            <div>
+                <Link href={{ pathname: slug, query: { postId: id } }}>
+                    <a>
+                        {title}
+                    </a>
+
+                </Link>
+            </div>
+
+
+
+            <div>
+                <Typography variant="body2" color="textSecondary" component="p"> {description} </Typography>
+            </div>
+        </div >
 
     )
 }

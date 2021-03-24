@@ -16,6 +16,8 @@ class Home extends Component {
         this.setState({ data: r })
     }
 
+    
+
     render() {
         const { data } = this.state
         return (
@@ -25,7 +27,7 @@ class Home extends Component {
                         <Grid key={item._id} item xs={12} sm={6} md={4}>
                             <HeroPost
                                 id={item._id}
-                                image={item.image}
+                                // image='https://source.unsplash.com/random?'
                                 slug={item.slug}
                                 title={item.title}
                                 description={item.description}
